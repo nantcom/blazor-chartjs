@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>NC.Blazor</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/nantcom/blazor-chartjs</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nantcom/blazor-chartjs</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>chartjs, blazor</PackageTags>
+    <PackageReleaseNotes>Initial Release. Tested with ChartJs3.1.0</PackageReleaseNotes>
+    <PackageId>NC-Blazor.ChartJs3</PackageId>
+    <Authors>Jirawat Padungkijjanont</Authors>
+    <Company>NantCom Co., Ltd.</Company>
+    <Description>NuGet for using ChartJs3 with your Blazor Project
+
+The main goal of this project is to be a lightweight wrapper around ChartJs3 and made the development experience as close to using JavaScript as possible - so you could consult ChartJS Documentation when you got stuck.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>2021 NantCom Co., Ltd.</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\ChartJs3.razor.js" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\ChartJs3.razor.js" />
+  </ItemGroup>
+
+</Project>
