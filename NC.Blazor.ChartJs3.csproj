@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -17,11 +17,11 @@
 The main goal of this project is to be a lightweight wrapper around ChartJs3 and made the development experience as close to using JavaScript as possible - so you could consult ChartJS Documentation when you got stuck.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>2021 NantCom Co., Ltd.</Copyright>
+    <AssemblyName>NC-Blazor.ChartJs3</AssemblyName>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.1.2</AssemblyVersion>
+    <FileVersion>1.0.1.2</FileVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot\ChartJs3.razor.js" />
-  </ItemGroup>
 
   
   <ItemGroup>
@@ -31,10 +31,6 @@ The main goal of this project is to be a lightweight wrapper around ChartJs3 and
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.4" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\ChartJs3.razor.js" />
   </ItemGroup>
 
 </Project>

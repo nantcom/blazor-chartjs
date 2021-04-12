@@ -83,7 +83,7 @@ namespace NC.Blazor
                 return;
             }
 
-            var module = await this.JSRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/NC.Blazor.ChartJs3/ChartJs3.razor.js");
+            var module = await this.JSRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/NC-Blazor.ChartJs3/ChartJs3.razor.js");
 
             _Handler = DotNetObjectReference.Create(new ChartJsCallbackHandler(this));
             _ChartJSInstance = await module.InvokeAsync<IJSObjectReference>("ChartJS3Blazor", _ChartJSCanvas, this.ChartJsInitializer.ToString(), false, _Handler);
