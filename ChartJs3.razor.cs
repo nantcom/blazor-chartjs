@@ -2,6 +2,7 @@
 using Microsoft.JSInterop;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace NC.Blazor
@@ -110,6 +111,21 @@ namespace NC.Blazor
             this.ThrowIfChartNotInitialized();
 
             return _ChartJSInstance.InvokeVoidAsync("changeData", dataSetIndex, data, labels);
+
+        }
+
+        /// <summary>
+        /// Changes the data in the chart
+        /// </summary>
+        /// <param name="dataSetIndex"></param>
+        /// <param name="data"></param>
+        /// <param name="labels"></param>
+        /// <returns></returns>
+        public ValueTask ChangeData(IEnumerable<double[]> data, string[] labels = null)
+        {
+            this.ThrowIfChartNotInitialized();
+
+            return _ChartJSInstance.InvokeVoidAsync("changeAllData", data, labels);
 
         }
 

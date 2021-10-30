@@ -21,6 +21,7 @@ The main goal of this project is to be a lightweight wrapper around ChartJs3 and
     <Version>1.0.2</Version>
     <AssemblyVersion>1.0.1.2</AssemblyVersion>
     <FileVersion>1.0.1.2</FileVersion>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   
